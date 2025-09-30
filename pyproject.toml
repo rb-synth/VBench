@@ -29,6 +29,7 @@ requires-python = ">=3.8"
 dependencies = [
     "Pillow",
     "numpy<2.0.0",
+    "openai-clip",
 ]
 
 [project.urls]
@@ -51,7 +52,6 @@ dev = [
     "opencv-python",
     "scikit-learn",
     "scikit-image",
-    "openai-clip",
     "decord",
     "requests",
     "pyyaml",
