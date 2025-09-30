@@ -4,39 +4,24 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "vbench"
-version = "0.1.5"
+version = "0.1.6"
 description = "Video generation benchmark"
 readme = "README-pypi.md"
 license = {text = "Apache Software License 2.0"}
-authors = [
-    {name = "VBench Team"}
-]
-classifiers = [
-    "Development Status :: 4 - Beta",
-    "Intended Audience :: Developers",
-    "Intended Audience :: Science/Research",
-    "License :: OSI Approved :: Apache Software License",
-    "Operating System :: OS Independent",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Topic :: Scientific/Engineering :: Artificial Intelligence",
-    "Topic :: Software Development :: Libraries :: Python Modules",
-]
+
 requires-python = ">=3.8"
 dependencies = [
     "Pillow",
     "numpy<2.0.0",
     "openai-clip",
+    "setuptools",
+    "easydict",
+    "pyiqa",
+    "omegaconf",
 ]
 
 [project.urls]
 Source = "https://github.com/Vchitect/VBench"
-Homepage = "https://vchitect.github.io/VBench-project/"
-Documentation = "https://github.com/Vchitect/VBench"
-"Bug Tracker" = "https://github.com/Vchitect/VBench/issues"
 
 [project.scripts]
 vbench = "vbench.cli.vbench:main"
@@ -55,14 +40,11 @@ dev = [
     "decord",
     "requests",
     "pyyaml",
-    "easydict",
-    "pyiqa",
     "lvis",
     "fairscale>=0.4.4",
     "fvcore",
     "urllib3",
     "boto3",
-    "omegaconf",
     "transformers>=4.33.2",
     "pycocoevalcap",
 ]
